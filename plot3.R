@@ -16,7 +16,7 @@ data$DateTime <- strptime(paste(data$Date, data$Time), "%d/%m/%Y %H:%M:%S")
 data <- subset(data, as.Date(DateTime) >= as.Date("2007-02-01") & 
                    as.Date(DateTime) <= as.Date("2007-02-02"))
 
-png("plot3.png", height=640, width=640)
+png("plot3.png", height=480, width=480)
 
 plot(data$DateTime, data$Sub_metering_1, pch=NA, xlab="", 
      ylab="Energy sub metering")

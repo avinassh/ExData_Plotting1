@@ -17,13 +17,13 @@ data$DateTime <- strptime(paste(data$Date, data$Time), "%d/%m/%Y %H:%M:%S")
 data <- subset(data, as.Date(DateTime) >= as.Date("2007-02-01") & 
                     as.Date(DateTime) <= as.Date("2007-02-02"))
 
-png("plot4.png", height=640, width=640)
+png("plot4.png", height=480, width=480)
 
 par(mfrow=c(2,2))
 
 # Global Active Power Plot
 plot(data$DateTime, data$Global_active_power, xlab="", pch=NA, 
-     ylab="Global Active Power (kilowatts)")
+     ylab="Global Active Power")
 lines(data$DateTime, data$Global_active_power)
 
 # Voltage Plot
